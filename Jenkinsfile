@@ -12,7 +12,7 @@ pipeline{
         }        
         stage('Publish artefact') {
             steps{
-                archiveArtifacts 'myGo2HWmoms_master@2'
+                archiveArtifacts 'myGo2HWmoms_master'
             }
         }
     }

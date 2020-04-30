@@ -12,7 +12,7 @@ pipeline{
         }        
         stage('Publish artifact') {
             steps{
-                archiveArtifacts 'myGo2HWmoms_master'
+                copyArtifacts filter: 'myGo2HWmoms', fingerprintArtifacts: true, projectName: 'myGo2HWmoms/master', selector: lastSuccessful()
             }
         }
     }

@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools {
-        go {'go'}
+        go {'go-1.14'}
         }
 
     stages {
@@ -10,7 +10,7 @@ pipeline{
                 sh 'go build'
             }
         }        
-        stage('Publish artefact') {
+        stage('Publish artifact') {
             steps{
                 archiveArtifacts 'myGo2HWmoms_master'
             }
